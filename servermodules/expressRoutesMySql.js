@@ -20,9 +20,9 @@ module.exports = function(app)
     ('SELECT * from areachartstockprice',
       function(err, rows, fields)
        {
-        if (!err)
+        if (err)
           //console.log('The solution is: ', rows);
-       else
+       //else
           console.log('Error while performing Query.', err);
        res.send(rows);
        }
@@ -41,9 +41,9 @@ module.exports = function(app)
    ('SELECT * from linechartsingle',
       function(err, rows, fields)
       {
-        if (!err)
+        if (err)
           //console.log('The solution is: ', rows);
-        else
+        //else
           console.log('Error while performing Query.', err);
         res.send(rows);
       }
@@ -61,9 +61,9 @@ module.exports = function(app)
    ('SELECT * from collegesbystate',
       function(err, rows, fields)
       {
-       if (!err)
+       if (err)
           //console.log('The solution is: ', rows);
-       else
+       //else
           console.log('Error while performing Query.', err);
       res.send(rows);
       }
@@ -86,9 +86,9 @@ module.exports = function(app)
     ('SELECT * from collegesbystate',
 				function(err, rows, fields)
         {
-				 if (!err)
+				 if (err)
 				  	//console.log('The solution is: ', rows);
-				 else
+				 //else
 						console.log('Error while performing Query.', err);
 				 res.send(rows);
 			  }
@@ -100,9 +100,9 @@ module.exports = function(app)
     ('SELECT * from collegesbystate where numcolleges > ?',numofcolleges,
 				function(err, rows, fields) 
         {
-				 if (!err)
+				 if (err)
 						//console.log('The solution is: ', rows);
-				 else
+				 //else
 						console.log('Error while performing Query.', err);
 				 res.send(rows);
         }
@@ -123,9 +123,9 @@ module.exports = function(app)
     ('SELECT * from multilinechart',
       function(err, rows, fields)
       {
-       if (!err)
+       if (err)
         //console.log('The line charts is: ', rows);
-       else
+       //else
         console.log('Error while performing Query.', err);
         res.send(rows);
       }
@@ -137,9 +137,9 @@ module.exports = function(app)
     ('SELECT * from multilinechart where symbol = ?',stockSymbol,
   	  function(err, rows, fields)
       {
-  		 if (!err)
+  		 if (err)
   		 	 //console.log('The line charts is: ', rows);
-  		 else
+  		 //else
   		 	 console.log('Error while performing Query.', err);
   		 	 res.send(rows);
   		}
@@ -167,9 +167,9 @@ module.exports = function(app)
     ('SELECT * from areachartstockprice',
          function(err, rows, fields) 
          {
-          if (!err)
-            console.log('The area charts is: ');
-          else
+          if (err)
+            //console.log('The area charts is: ');
+          //else
             console.log('Error while performing Query.', err);
             res.send(rows);
          }
@@ -181,9 +181,9 @@ module.exports = function(app)
      ('SELECT * from areachartstockprice where years >= ?',year,
        function(err, rows, fields) 
        {
-        if (!err)
-          console.log('The area charts is: ');
-        else
+        if (err)
+          //console.log('The area charts is: ');
+        //else
           console.log('Error while performing Query.', err);
           res.send(rows);
        }
@@ -201,9 +201,9 @@ module.exports = function(app)
     ('SELECT * from scatterplot',
 			function(err, rows, fields)
       {
-			 if (!err)
-				 console.log('The scatter plot charts is: ', rows);
-			 else
+			 if (err)
+				 //console.log('The scatter plot charts is: ', rows);
+			 //else
 				 console.log('Error while performing Query.', err);
 				 res.send(rows);
 			}
