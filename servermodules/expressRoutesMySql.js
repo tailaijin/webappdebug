@@ -1,11 +1,4 @@
 var mysql      = require('mysql');
-   var connection = mysql.createConnection
-({
-  host     : 'localhost',
-  user     : 'root',
-  password : '123456',
-  database : 'charts'
-});
 
 module.exports = function(app) 
 {
@@ -14,6 +7,13 @@ module.exports = function(app)
  app.get
  ('/api/highchartarea', function(req,res) 
   {
+       var connection = mysql.createConnection
+({
+  host     : 'localhost',
+  user     : 'root',
+  password : '123456',
+  database : 'charts'
+});
     connection.connect();
     console.log('coming here to get high chart area');
     connection.query
@@ -35,6 +35,13 @@ module.exports = function(app)
  app.get
  ('/api/highchartline', function(req,res)
   {
+       var connection = mysql.createConnection
+({
+  host     : 'localhost',
+  user     : 'root',
+  password : '123456',
+  database : 'charts'
+});
    connection.connect();
    console.log('coming here to get high chart line');
    connection.query
@@ -55,6 +62,13 @@ module.exports = function(app)
  app.get
  ('/api/highchartcolumn', function(req,res)
   {
+       var connection = mysql.createConnection
+({
+  host     : 'localhost',
+  user     : 'root',
+  password : '123456',
+  database : 'charts'
+});
    connection.connect();
    console.log('coming here to get high chart column');
    connection.query
@@ -76,6 +90,13 @@ module.exports = function(app)
  app.get
  ('/api/columnchart', function(req,res) 
   {
+       var connection = mysql.createConnection
+({
+  host     : 'localhost',
+  user     : 'root',
+  password : '123456',
+  database : 'charts'
+});
 	 connection.connect();
    //Client decide fliter condition
 	 var numofcolleges = req.query.numofcolleges;
@@ -115,6 +136,13 @@ module.exports = function(app)
  app.get
  ('/api/linechart', function(req,res)
   {
+       var connection = mysql.createConnection
+({
+  host     : 'localhost',
+  user     : 'root',
+  password : '123456',
+  database : 'charts'
+});
 	 connection.connect();
    var stockSymbol = req.query.stockSymbol;
    if(stockSymbol == 'all' || stockSymbol == '')
@@ -154,6 +182,13 @@ module.exports = function(app)
  app.get
  ('/api/areachart', function(req,res)
   {
+       var connection = mysql.createConnection
+({
+  host     : 'localhost',
+  user     : 'root',
+  password : '123456',
+  database : 'charts'
+});
    var startDate = req.query.startDate;
    var endDate = req.query.endDate;
    var year = req.query.year;
@@ -196,6 +231,13 @@ module.exports = function(app)
  app.get
  ('/api/scatterplot', function(req,res)
   {
+       var connection = mysql.createConnection
+({
+  host     : 'localhost',
+  user     : 'root',
+  password : '123456',
+  database : 'charts'
+});
 		connection.connect();
 		connection.query
     ('SELECT * from scatterplot',
